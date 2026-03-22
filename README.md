@@ -1,130 +1,66 @@
-# 🚨 Sonar Rock vs Mine Classifier  
-### A Machine Learning Project (According to Literally Everyone Except My AI Lab Instructor)
+ # Sonar Signal Classification: Rock vs. Mine
+
+A comprehensive Machine Learning pipeline and GUI-based diagnostic tool designed to classify sonar returns from the seafloor. This project utilizes supervised learning techniques to distinguish between metal cylinders (simulated mines) and rocks based on spectral envelopes.
 
 ---
 
-## 🤖 What Is This?
+## Executive Summary
 
-This repository contains a **Sonar Rock vs Mine classification system** built using:
+This repository implements a data-driven classification system for underwater object detection. By leveraging the **K-Nearest Neighbors (KNN)** algorithm, the system performs binary classification on 60-feature sonar signal vectors. 
 
-- A real dataset  
-- A real ML algorithm  
-- A real training pipeline  
-- Real evaluation metrics  
-
-And yet…
-
-> ❌ “This is not a Machine Learning model.”  
-> ✔️ “This is an Expert Rule-Based System.”
-
-— stated confidently by my AI lab instructor.
-
-No rules were written.  
-No expert knowledge was encoded.  
-But apparently, the algorithm *felt* rule-based.
+The project demonstrates a full ML lifecycle:
+* **Data Ingestion:** Processing high-dimensional sonar datasets.
+* **Feature Engineering:** Scaling and normalizing numerical input vectors.
+* **Model Optimization:** Implementing distance-based classification.
+* **Evaluation:** Analyzing performance via Accuracy Scores and Confusion Matrices.
+* **Deployment:** A custom Tkinter-based GUI for real-time inference and visualization.
 
 ---
 
-## 🧠 How This “Rule-Based System” Works
+## Technical Architecture
 
-### According to Computer Science:
+## The Machine Learning Core
+The model relies on **Statistical Inference** to identify patterns within 60 different frequency bands to determine the material composition of an object.
 
-1. Load the Sonar dataset  
-2. Split data into training and testing sets  
-3. Scale numerical features  
-4. Train a **K-Nearest Neighbors (KNN)** classifier  
-5. Evaluate accuracy and confusion matrix  
-6. Predict unseen samples  
+1.  **Preprocessing:** Feature scaling using `scikit-learn` to ensure uniform distance weighting.
+2.  **Algorithm:** K-Nearest Neighbors (KNN) for non-parametric classification.
+3.  **Split Strategy:** 80/20 Train-Test split for robust validation.
+4.  **Inference:** Statistical similarity mapping between new inputs and the training manifold.
 
-### According to My AI Lab:
-
-1. ???  
-2. ❌ Not ML  
-3. ❌ Definitely rule-based  
-4. ❌ Rejected  
-
----
-
-## 📊 Features (Suspiciously Machine Learning)
-
-- Supervised learning  
-- Distance-based classification  
-- Zero hand-written rules  
-- Data-driven predictions  
-- Accuracy measurement  
-
-Clearly, this system was **thinking statistically without permission**.
+## Interactive GUI Capabilities
+The system includes a production-ready interface for testing and analysis:
+* **Randomized Sampling:** Instantly pull and classify samples from the test set.
+* **Manual Feature Input:** Full control over 60 numeric features for custom signal testing.
+* **Real-time Analytics:** Integrated Matplotlib/Seaborn plots for Confusion Matrix rendering.
+* **Dynamic Feedback:** Color-coded UI indicators for "Mine" (Risk) vs. "Rock" (Safe) predictions.
 
 ---
 
-## 🖥️ GUI Capabilities
+## Technology Stack
 
-- 🎲 Random test sample prediction  
-- ✍️ Custom input (60 numeric features)  
-- 📉 Confusion matrix visualization  
-- 📈 Model accuracy display  
-- 🎨 Color-coded prediction feedback  
-
-Still not ML.  
-Just *very intelligent rules*, apparently.
+* **Language:** Python 3.x
+* **Data Processing:** Pandas, NumPy
+* **Machine Learning:** Scikit-learn
+* **Visualization:** Matplotlib, Seaborn
+* **Interface:** Tkinter
 
 ---
 
-## 🧪 Technologies Used
+## Performance Evaluation
 
-- Python  
-- Tkinter (for emotional damage)  
-- scikit-learn (purely decorative, I guess)  
-- Pandas & NumPy  
-- Matplotlib & Seaborn  
+The model provides a transparent look at its predictive capabilities through standard industry metrics:
 
----
-
-## 📉 Evaluation Results
-
-- Accuracy: Displayed  
-- Confusion Matrix: Rendered  
-- Instructor Satisfaction: **0.00**
+| Metric | Description |
+| :--- | :--- |
+| **Accuracy Score** | Percentage of correctly classified sonar returns. |
+| **Confusion Matrix** | Granular view of True Positives, True Negatives, False Positives, and False Negatives. |
+| **Inference Latency** | Near-instantaneous prediction suitable for real-time sonar monitoring. |
 
 ---
+## Installation & Usage
 
-## 🧑‍🏫 Academic Classification (Final Verdict)
-
-| Criteria | Result |
-|--------|--------|
-| Uses a dataset | ❌ |
-| Trains a model | ❌ |
-| Uses ML algorithm | ❌ |
-| Learns from data | ❌ |
-| Is Machine Learning | ❌ |
-| Rejected | ✅ |
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🎓 Educational Use
-
-Perfect for:
-- AI/ML students learning
-- Understanding inference algorithms
-- Demonstrating rule-based reasoning
-- Teaching knowledge representation
-
-
-## 📧 Contact
-
-Questions or suggestions? Feel free to open an issue!
-
-israrbaig557799@gmail.com
-
-⭐ **If this project helped you learn about this, please give it a star!**
-
-
-## 🚀 How to Run This “ML” Project
-
+## 1. Clone the Repository
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-python sonar_gui.py
+git clone [https://github.com/Muhammad-Israr-baig/sonar-classification.git](https://github.com/Muhammad-Israr-baig/sonar-classification.git)
+cd sonar-classification
+
